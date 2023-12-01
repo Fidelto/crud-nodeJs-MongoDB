@@ -13,19 +13,19 @@ To install the dependencies, use the Node terminal or your computer's command li
 
 Express is often used in conjunction with template engines like EJS to dynamically generate HTML pages based on data from the server. Express can be configured to use EJS as the view engine, allowing you to render EJS templates on the server side and send the resulting HTML to the client.
 
-### npm install express
+`npm install express`
 
 ## EJS
 
 EJS is a templating engine for JavaScript. It allows you to embed dynamic JavaScript code within your HTML markup.
 
-### npm install ejs
+`npm install ejs`
 
 ## Mongoose
 
 Mongoose is a popular object modeling tool for MongoDB, a NoSQL database. It is designed to simplify interactions with MongoDB through a straightforward schema-based approach. Mongoose provides a robust and flexible framework for defining data models, validation rules, and middleware functions.
 
-### npm install mongoose
+`npm install mongoose`
 
 After installing the dependencies, access the MongoDB Atlas link, create a free account, and set up your database with collections.
 
@@ -37,6 +37,6 @@ Create a database named "crud" and a collection named "users." Watch the YouTube
 
 Open the terminal and enter the following command:
 
-### node app
+`node app`
 
 After running this command, open your browser and enter the URL: localhost/5500 to test the project.
