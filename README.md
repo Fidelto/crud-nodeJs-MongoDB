@@ -39,4 +39,4 @@ Open the terminal and enter the following command:
 
 ### node app
 
-After running this command, open your browser and enter the URL: localhost/5500 to test the project.# crud-node-mongo
+After running this command, open your browser and enter the URL: localhost/5500 to test the project.
