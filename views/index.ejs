@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index page</title>
+</head>
+<style>
+    .main{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .links{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    a{
+      font-size: 15px; 
+      text-decoration: none;
+      text-align: center;
+      height:30px;
+    border-radius: 3px;
+    width: 80px;
+    line-height: 30px;
+    }
+  .add{
+    display: block;
+    background: blue;
+    color: #fff;
+   
+  }
+</style>
+<body>
+    <div class="main">
+        <h1>Dashboard</h1>
+       <div class="links">
+        <a href="/views/add" class="add">Add user</a>
+        <a href="/views/list" class="list">Show users</a>
+       </div>
+    </div>
+</body>
+</html>

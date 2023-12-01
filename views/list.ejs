@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usesr</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        text-align: center;
+    }
+    th,td{
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    <h1>All users</h1>
+    <table>
+        <thead>
+           <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Delete</th>
+            <th>Update</th>
+           </tr>
+        </thead>
+        <tbody>
+            <%if(users.length>0){%>
+<% users.forEach(user=>{%>
+<tr>
+    <td><%=user._id%></td>
+    <td><%=user.name%></td>
+    <td><%=user.email%></td>
+    <td><%=user.password%></td>
+    <td><a href="#" class="delete" data-id="<%=user._id%>">Delete</a></td>
+    <td><a href="#" class="update" data-up="<%=user._id%>">Edit</a></td>
+
+</tr>
+<%})%>
+
+
+                <%}%>
+        </tbody>
+    </table>
+    <script>
+        document.querySelectorAll('.delete').forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                const endpoint=`/views/list/${btn.dataset.id}`;
+                fetch(endpoint,{method:'delete'})
+                .then(response=>response.json())
+                .then(data=>{
+                    window.location.href=data.redirect;
+                })
+            })
+        })
+        document.querySelectorAll('.update').forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                const endpoint=`/views/edit/${btn.dataset.up}`;
+                fetch(endpoint)
+                .then(result=>{})
+                .then(data=>{
+                    window.location.href=`/views/edit/${btn.dataset.up}`;
+                })
+            })
+        })
+    </script>
+</body>
+</html>
